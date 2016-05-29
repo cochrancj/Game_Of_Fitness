@@ -1,3 +1,52 @@
 <h1>Welcome Back <%= @user.username %> </h1>
 
-<%= button_to "Log Out", deletion_station_path, method: :delete %>
+<!-- <div class="left-box"> -->
+  <div class="avatar">
+    <p>%= @user.avatar %</p>
+    <img src='/assets/images/Elf.png'>
+  </div>
+
+  <div class="stats">
+    <p>Name: <%= @user.username %></p>
+    <p>Class: %= @user.class%</p>
+    <p>Guild: %= @user.guild%</p>
+    <p>Mana: %= @user.mana%</p>
+    <p>Boss Battle Unlocks in: %= @user.xx% Mama.</p>
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="action-buttons">
+    <button>WOD</button>
+    <button>Boss Battle</button>
+  </div>
+
+  <div class="rules">
+    <h4>Game Rules</h4>
+    <p>Click on the WOD button above to begin today's workout. Each WOD is 4 rounds of 13 cards (52 total - the size of a standard playing card deck). You'll get 13 cards per round and can rest between rounds. </p>
+    <p>Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
+    <p>The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accure; the better you'll do.  </p>
+    <p>Ready? Let's kick some ass today.</p>
+  </div>
+
+  <div class="clear"></div>
+
+</div>
+
+<div class="clear"></div>
+
+  <div class="bag-of-holding">
+    <h4>INVENTORY</h4>
+    3 BOXES WIDE <br>
+    3 BOXES WIDE <br>
+    3 BOXES WIDE <br>
+    3 BOXES WIDE <br>
+    3 BOXES WIDE <br>
+    3 BOXES WIDE <br>
+    3 BOXES WIDE <br>
+    3 BOXES WIDE <br>
+  </div>
+
+  <div class="clear"></div>
+
+  <%= button_to "Log Out", deletion_station_path, method: :delete %>

@@ -1,11 +1,11 @@
 class SessionsController < ApplicationController
   def create
-    #get the fields from the form
+    # grab the form fields
     username = params[:username]
     password = params[:password]
-    #now confirm they're the right thing
+    # confirm that they're right 
     user = User.find_by username: username
-
+    # if the user and their password matches, redirect to profile page; else send back to log in
     if user && user.authenticate( password )
       session[:user_id] = user.id
       redirect_to profile_path

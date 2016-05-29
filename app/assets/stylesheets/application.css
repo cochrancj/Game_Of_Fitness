@@ -1,10 +1,82 @@
 @font-face {
   font-family: 'gOT';
-  src: local('Game_of_Thrones'), local('Game of Thrones'), url('fonts/Game_of_Thrones.ttf') format('truetype');
+  src: url('Game_of_Thrones.ttf');
+  src: url('Game_of_Thrones') format('truetype');
 }
 
-.headline {
+@font-face {
+  font-family: 'game';
+  src: url('Pixel_Azure_Bonds.otf');
+  src: url('Pixel_Azure_Bonds') format('opentype');
+}
+
+body {
+  background-image: url('cache.jpeg');
+  /*background-image: <%= image_tag("cache.jpeg") %>;*/
+}
+
+h1 {
   font-family: 'gOT', serif;
+  letter-spacing: 0.10em;
+  color: goldenrod;
+}
+
+h4  {
+  font-family: 'game', sans-serif;
+  color: green;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.left-box {
+  float:left;
+}
+
+.avatar {
+  width: 20%;
+  height: 20%;
+  border: 1px solid black;
+  margin: 3%;
+  background-color: snow;
+  float: left;
+}
+
+.stats {
+  width: 20%;
+  height: 30%;
+  border: 1px solid black;
+  margin: 3%;
+  background-color: snow;
+  float: left;
+  padding: 1%;
+}
+
+.rules {
+  width: 40%;
+  height: 30%;
+  border: 1px solid black;
+  margin: 3%;
+  margin-top: 20%;
+  padding: 2%;
+  background-color: moccasin;
+  float: left;
+}
+
+.bag-of-holding {
+  width: 30%;
+  height: 80%;
+  border: 1px solid black;
+  margin: 3%;
+  background-color: moccasin;
+  float: right;
+  text-align: center;
+  padding: 1%;
+}
+
+.clear {
+  float: none;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

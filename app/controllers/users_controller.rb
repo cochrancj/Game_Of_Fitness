@@ -23,10 +23,10 @@ class UsersController < ApplicationController
     end
   end
 
-  # this is where all our form junk lives so we don't get hacked. 
+  # this is where all our form junk lives so we don't get hacked.
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :email, :class, :guild, :password, :password_confirmation)
   end
 end

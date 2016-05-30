@@ -12,7 +12,6 @@
 
 body {
   background-image: url('cache.jpeg');
-  /*background-image: <%= image_tag("cache.jpeg") %>;*/
 }
 
 h1 {
@@ -21,53 +20,84 @@ h1 {
   color: goldenrod;
 }
 
+h2  {
+  font-family: 'game', sans-serif;
+  color: green;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
 h4  {
   font-family: 'game', sans-serif;
   color: green;
+}
+
+.game {
+  font-family: 'game', sans-serif;
+  color: green;
+  font-size: 1em;
 }
 
 p {
   font-family: 'PT Sans', sans-serif;
 }
 
-.left-box {
-  float:left;
-}
 
-.avatar {
+
+#avatar {
   width: 20%;
   height: 20%;
-  border: 1px solid black;
+  border: 3px solid goldenrod;
+  border-radius: 10%;
   margin: 3%;
+  padding: 1%;
   background-color: snow;
   float: left;
 }
 
-.stats {
+#stats {
   width: 20%;
   height: 30%;
-  border: 1px solid black;
+  border: 3px solid goldenrod;
+  border-radius: 10%;
   margin: 3%;
   background-color: snow;
   float: left;
   padding: 1%;
 }
 
-.rules {
+#rules {
   width: 40%;
   height: 30%;
-  border: 1px solid black;
+  border: 3px solid goldenrod;
+  border-radius: 10%;
   margin: 3%;
-  margin-top: 20%;
   padding: 2%;
   background-color: moccasin;
   float: left;
 }
 
-.bag-of-holding {
+#rules-front {
+  width: 40%;
+  height: 30%;
+  border: 3px solid goldenrod;
+  border-radius: 10%;
+  margin: 3%;
+  padding: 2%;
+  /*background-color: moccasin;*/
+  margin: 0 auto;
+  background-image: url('parchment.jpg');
+}
+
+#bag-of-holding {
   width: 30%;
   height: 80%;
-  border: 1px solid black;
+  border: 3px solid goldenrod;
+  border-radius: 10%;
   margin: 3%;
   background-color: moccasin;
   float: right;
@@ -78,6 +108,40 @@ p {
 .clear {
   float: none;
 }
+
+.button-large {
+  font-size: 110%;
+}
+
+.button-success {
+  background: rgb(28, 184, 65); /* this is a green */
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.headline {
+  margin-left: 2%;
+}
+
+.home-headline {
+  text-align: center;
+}
+
+#login {
+  width: 40%;
+  height: 30%;
+  border: 3px solid goldenrod;
+  border-radius: 10%;
+  margin: 3%;
+  padding-top: 6%;
+  padding-bottom: 4%;
+  margin: 0 auto;
+  background-image: url('parchment.jpg');
+  text-align: center;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

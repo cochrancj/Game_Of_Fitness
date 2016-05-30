@@ -1,13 +1,20 @@
-<h1>Log In Here!</h1>
+<div class="home-headline">
+  <h1>Log In</h1>
+</div>
 
-<%= form_tag '/sessions', method: :post do %>
+<div id="login">
 
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
+  <%= form_tag '/sessions', method: :post do %>
 
-  <%= label_tag :password %>
-  <%= text_field_tag :password %>
+    <span class="game"><%= label_tag :username %>: </span>
+    <%= text_field_tag :username %>
+    <br>
+    <br>
+    <span class="game"><%= label_tag :password %>: </span>
+    <%= text_field_tag :password %>
+    <br>
+    <br>
+    <%= submit_tag "Log In"%>
 
-  <%= submit_tag "Log In"%>
-
-<% end %>
+  <% end %>
+</div>

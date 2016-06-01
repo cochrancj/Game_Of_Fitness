@@ -1,0 +1,23 @@
+<div class="gameboard" ng-app="Game-Of-Fitness-App">
+
+  <div class="wod" ng-controller="WorkoutsController">
+
+    <header>
+      <div>
+        <h2>ROC</h2>
+      </div>
+    </header>
+
+    <div class="container">
+      <ul class="cards">
+        <span class="card" ng-repeat="card in cards">
+              <img src="{{ card.img }}" alt="magic card style workout photo of {{ card.name }}" />
+              <h4> {{ card.title }}</h4>
+              <p> {{ card.mana }}</p>
+        </span>
+      </ul>
+
+    </div>
+  </div>
+
+</div>

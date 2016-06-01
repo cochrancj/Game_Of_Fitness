@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'game/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,6 +13,10 @@ Rails.application.routes.draw do
 
   post '/sessions' => "sessions#create", as: :cration_station
   delete '/sessions' => "sessions#destroy", as: :deletion_station
+
+  namespace :api do
+    resources :cards
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -3,7 +3,10 @@ class SessionsController < ApplicationController
     # grab the form fields
     username = params[:username]
     password = params[:password]
-    # confirm that they're right 
+    # email = params[:email]
+    # class = params[:class]
+    # guild = params[:guild]
+    # confirm that they're right
     user = User.find_by username: username
     # if the user and their password matches, redirect to profile page; else send back to log in
     if user && user.authenticate( password )
@@ -20,4 +23,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to log_in_path
   end
+
+
 end

@@ -6,21 +6,21 @@
 
 <div class="pure-g">
 
-  <div id="avatar" class="pure-u-1-3">
-    <p>%= @user.avatar %</p>
-    <img src='/assets/images/Elf.png'>
+  <div id="avatar-box" class="pure-u-1-3">
+    <%= image_tag("elf-avatar-female.jpg", :id => "avatar") %>
   </div>
 
   <div id="stats" class="pure-u-1-3">
     <p><span class="game">Name:</span> <%= @user.username %></p>
-    <p><span class="game">Class:</span> %= @user.class%</p>
-    <p><span class="game">Guild:</span> %= @user.guild%</p>
-    <p><span class="game">Mana:</span> %= @user.mana%</p>
-    <p><span class="game">Boss Battle Unlocks in:</span> %= @user.xx% <span class="game"> Mana.</span></p>
+    <p><span class="game">Class:</span> <%= @user.race %></p>
+    <p><span class="game">Guild:</span> <%= @user.guild %></p>
+    <p><span class="game">Mana:</span> <%= @user.mana %></p>
+    <p><span class="game">Boss Battle Unlocks in:</span> <%= @user.mana %> <span class="game"> Mana.</span></p>
   </div>
 
   <div id="bag-of-holding" class="pure-u-1-3">
     <h4>INVENTORY</h4>
+    <%= @user.loot %>
       3 BOXES WIDE <br>
       3 BOXES WIDE <br>
       3 BOXES WIDE <br>
@@ -40,7 +40,7 @@
     <p>Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
     <p>The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accure; the better you'll do.  </p>
     <p>Ready? Let's kick some ass today.</p>
-    <button class="button-large button-success pure-button">WOD</button>
+    <a href="/game/index.html"><button ng-controller="WorkoutsController" ng-click="shuffle(cards)" class="button-large button-success pure-button">WOD</button></a>
     <button class="pure-button pure-button-disabled">Boss Battle</button>
 
   </div>

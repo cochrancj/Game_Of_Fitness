@@ -8,8 +8,8 @@
 
 Card.create([
 
-    { name: '2 Enchantment', mana: 2 , img: "../../../app/assets/images/2-Enchantment.png"},
-    { name: '2 Land', mana: 2, img: "../../assets/images/2-Land.png"},
+    { name: '2 Enchantment', mana: 2 , img: "2-Enchantment.png"},
+    { name: '2 Land', mana: 2, img: "2-Land.png"},
     { name: '2 Sorcery', mana: 2, img: "2-Sorcery.png"},
     { name: '2 Tribal', mana: 2, img: "2-Tribal.png"},
     { name: '3 Enchantment', mana: 3, img: "3-Enchantment.png"},

@@ -19,28 +19,27 @@ h1 {
   font-family: 'gOT', serif;
   letter-spacing: 0.10em;
   color: goldenrod !important;
-  /*font-size: 2em;*/
 }
 
 h2  {
   font-family: 'game', sans-serif;
-  color: green;
+  color: green !important;
   text-align: center;
 }
 
 a {
-  text-decoration: none;
-  color: green;
+  text-decoration: none !important;
+  color: green !important;
 }
 
 h4  {
   font-family: 'game', sans-serif;
-  color: green;
+  color: green !important;
 }
 
 .game {
   font-family: 'game', sans-serif;
-  color: green;
+  color: green !important;
   font-size: 1em;
 }
 
@@ -71,7 +70,6 @@ li {
   background-image: url('parchment.jpg');
   padding: 5%;
   line-height: 2;
-  /*font-size: 20px;*/
 }
 
 #rules {
@@ -101,25 +99,6 @@ li {
   text-align: center;
   padding: 1%;
 }
-
-/*.clear {
-  float: none;
-}*/
-
-/*.button-large {
-  font-size: 110%;
-}
-
-.button-success {
-  background: rgb(28, 184, 65);
-  color: white;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}*/
-
-/*.headline {
-  margin-left: 2%;
-}*/
 
 .home-headline {
   text-align: center;

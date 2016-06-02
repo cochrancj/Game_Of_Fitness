@@ -2,31 +2,43 @@
 
   <div class="wod" ng-controller="WorkoutsController">
 
-    <header>
+    <header class="content">
       <div>
-        <h1>Workout Of The Day</h1>
+        <h1 class="is-medium">Workout Of The Day</h1>
+        <h2><%= link_to "Profile Page", profile_path %></h2>
+
       </div>
+      <button ng-click="shuffle(cards)" class="button">Re-Shuffle</button>
     </header>
 
-
-
-    <button ng-click="shuffle(cards)">Re-Shuffle</button>
-
-    <!-- <div class="pure-g">
-      <div class="pure-u-1-3"> -->
-        <div class="container">
+        <div class="container content">
           <ul class="cards">
             <li>
-              <span id="card" ng-repeat="card in cards | orderBy:random" ng-hide="custom">
-              <!-- <span id="card" ng-repeat="card in cards | orderBy:random" ng-click="toggleClass($event, 'is-active')"> -->
+            <!-- <h4> Card Name: {{ card.name }}</h4>
+            <p> Mana: {{ card.mana }}</p> -->
+
+
+
+<!-- The below is an attempt at getting the clicked on card (or in this case, its button) to hide on click. This does not work, but something happens because the console log fires.  -->
+              <!-- <span id="card" ng-repeat="card in cards | orderBy:random" ng-show="visible">
+              <button ng-click="toggle()">Toggle</button> -->
+
+<!-- The below works to add an active class to a card when a card is clicked. Unfortunately, it hits a random card + reshuffles the cards instead of only affecting one card and not shuffing the cards. -->
+              <span id="card" ng-repeat="card in cards | orderBy:random" ng-click="toggleClassName($event, 'isactive')">
+
+              <img ng-src='/assets/{{card.img}}'/>
+
               <!-- <h4> Card Name: {{ card.name }}</h4>
               <p> Mana: {{ card.mana }}</p> -->
-              <img    ng-src='/assets/{{card.img}}'/>
+              <button ng-click="addToScore(card.mana, user_id, card.id,)">Add to Mana</button>
+<!-- This button works to add an active class to a card when a card is clicked. Unfortunately, it hits a random card + reshuffles the cards instead of only affecting one card and not shuffing the cards. -->
+              <!-- <button
+                      ng-class="{'button': !isActive, 'button active': isActive}"
+                      ng-init="isActive = false"
+                      ng-click="isActive = !isActive">
+                  Click Me
+              </button> -->
 
-              <button id="done" ng-click="toggleCustom()">Complete!</button>
-
-
-              <!-- <button id="btn" ng-click="toggleClass($event, 'is-active')">Change Class</button> -->
 
 
               </span>
@@ -35,7 +47,5 @@
           </ul>
         </div>
       </div>
-    <!-- </div>
-  </div> -->
 
 </div>

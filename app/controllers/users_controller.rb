@@ -14,6 +14,16 @@ class UsersController < ApplicationController
   def log_in
   end
 
+
+  def update
+    @user = User.find[:user_id]
+    @card = Card.find[:card_id]
+    @user.mana = @user.mana + @card.mana
+    @user.save
+
+  end
+  # find current user; find current score; take that number and add to the mana passed in and store that information in the user.
+
   # user profile - if a user is logged in (can find a session), bring up the user's info; else redirect to log in
   def profile
     if session[:user_id]

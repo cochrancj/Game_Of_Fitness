@@ -1,57 +1,66 @@
-<div class="headline">
-  <h1>Welcome Back <%= @user.username %> </h1>
-  <%= button_to "Log Out", deletion_station_path, method: :delete %>
-</div>
 
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article id="welcome" class="tile is-child content">
+          <h1>Welcome Back <%= @user.username %> </h1>
+          <%= button_to "Log Out", deletion_station_path, method: :delete, :class =>"button"  %>
+        </article>
+        <article id="avatar-box" class="tile is-child">
+            <%= image_tag("elf-avatar-female.jpg", :id => "avatar") %>
+        </article>
+      </div>
+      <div id="stats" class="tile is-parent">
+        <article class="tile is-child">
+          <p><span class="game">Name:</span> <%= @user.username %></p>
+          <p><span class="game">Class:</span> <%= @user.race %></p>
+          <p><span class="game">Guild:</span> <%= @user.guild %></p>
+          <p><span class="game">Mana:</span> <%= @user.mana %></p>
+          <p><span class="game">Boss Battle Unlocks in:</span> <%= @user.mana %> 900 <span class="game"> Mana.</span></p>
+        </article>
+      </div>
+    </div>
+    <div id="rules" class="tile is-parent">
+      <article class="tile is-child">
+        <!-- Any content you want here -->
+        <h4>Game Rules</h4>
+        <p>Click on the WOD button above to begin today's workout. Each WOD is 4 rounds of 13 cards (52 total - the size of a standard playing card deck). You'll get 13 cards per round and can rest between rounds. </p>
+        <p>Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
+        <p>The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accure; the better you'll do.  </p>
+        <p>Ready? Let's kick some ass today.</p>
 
-<div class="pure-g">
+        <div class="control is-grouped">
 
-  <div id="avatar-box" class="pure-u-1-3">
-    <%= image_tag("elf-avatar-female.jpg", :id => "avatar") %>
+          <p class="control">
+            <a href="/game/index.html" ng-controller="WorkoutsController" ng-click="shuffle(cards)" class="button">
+            WOD
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-disabled">
+            Boss Battle
+            </a>
+          </p>
+        </div>
+
+      </article>
+    </div>
   </div>
+  <div id="bag-of-holding" class="tile is-parent">
+    <article class="tile is-child">
+      <!-- Any content you want here -->
+      <h4>INVENTORY</h4>
+      <%= @user.loot %>
+        3 BOXES WIDE <br>
+        3 BOXES WIDE <br>
+        3 BOXES WIDE <br>
+        3 BOXES WIDE <br>
+        3 BOXES WIDE <br>
+        3 BOXES WIDE <br>
+        3 BOXES WIDE <br>
+        3 BOXES WIDE <br>
 
-  <div id="stats" class="pure-u-1-3">
-    <p><span class="game">Name:</span> <%= @user.username %></p>
-    <p><span class="game">Class:</span> <%= @user.race %></p>
-    <p><span class="game">Guild:</span> <%= @user.guild %></p>
-    <p><span class="game">Mana:</span> <%= @user.mana %></p>
-    <p><span class="game">Boss Battle Unlocks in:</span> <%= @user.mana %> <span class="game"> Mana.</span></p>
+    </article>
   </div>
-
-  <div id="bag-of-holding" class="pure-u-1-3">
-    <h4>INVENTORY</h4>
-    <%= @user.loot %>
-      3 BOXES WIDE <br>
-      3 BOXES WIDE <br>
-      3 BOXES WIDE <br>
-      3 BOXES WIDE <br>
-      3 BOXES WIDE <br>
-      3 BOXES WIDE <br>
-      3 BOXES WIDE <br>
-      3 BOXES WIDE <br>
-  </div>
-
-</div>
-
-<div class="pure-g">
-  <div id="rules" class="pure-u-1-3">
-    <h4>Game Rules</h4>
-    <p>Click on the WOD button above to begin today's workout. Each WOD is 4 rounds of 13 cards (52 total - the size of a standard playing card deck). You'll get 13 cards per round and can rest between rounds. </p>
-    <p>Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
-    <p>The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accure; the better you'll do.  </p>
-    <p>Ready? Let's kick some ass today.</p>
-    <a href="/game/index.html"><button ng-controller="WorkoutsController" ng-click="shuffle(cards)" class="button-large button-success pure-button">WOD</button></a>
-    <button class="pure-button pure-button-disabled">Boss Battle</button>
-
-  </div>
-
-  <div class="pure-u-1-3">
-
-
-  </div>
-
-  <div class="pure-u-1-3">
-
-  </div>
-
 </div>

@@ -1,3 +1,9 @@
+// $("#card").on("click", ".cardcomplete", function(){
+//     var completedCard = $(this).find(".ng-binding").text();
+//     console.log(completedCard);
+//   })
+
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //

@@ -10,14 +10,16 @@
   src: url('Pixel_Azure_Bonds') format('opentype');
 }
 
-body {
+
+.wrapper {
   background-image: url('cache.jpeg');
 }
 
 h1 {
   font-family: 'gOT', serif;
   letter-spacing: 0.10em;
-  color: goldenrod;
+  color: goldenrod !important;
+  /*font-size: 2em;*/
 }
 
 h2  {
@@ -44,77 +46,67 @@ h4  {
 
 p {
   font-family: 'PT Sans', sans-serif;
+
 }
 
+li {
+  list-style-type: none;
+}
 
-
+#welcome {
+  padding: 5%;
+}
 #avatar {
-width: 150px;
-height: 150px;
-  border: 3px solid goldenrod;
-  border-radius: 10%;
-  margin: 3%;
-  /*padding: 1%;
-  background-color: snow;*/
-  float: left;
-}
-
-/*#avatar {
   width: 150px;
   height: 150px;
-}*/
-
-#stats {
-  width: 20%;
-  height: 30%;
   border: 3px solid goldenrod;
   border-radius: 10%;
   margin: 3%;
-  background-color: snow;
-  float: left;
-  padding: 1%;
+}
+
+#stats {
+  border: 3px solid goldenrod;
+  border-radius: 10%;
+  margin: 3%;
+  background-image: url('parchment.jpg');
+  padding: 5%;
+  line-height: 2;
+  /*font-size: 20px;*/
 }
 
 #rules {
-  width: 40%;
-  height: 30%;
   border: 3px solid goldenrod;
-  border-radius: 10%;
+  border-radius: 5%;
   margin: 3%;
   padding: 2%;
-  background-color: moccasin;
-  float: left;
+  background-image: url('parchment.jpg');
 }
 
 #rules-front {
   width: 40%;
   height: 40%;
   border: 3px solid goldenrod;
-  border-radius: 10%;
+  border-radius: 5%;
   margin: 3%;
   padding: 2%;
-  /*background-color: moccasin;*/
   margin: 0 auto;
   background-image: url('parchment.jpg');
 }
 
 #bag-of-holding {
-  width: 30%;
-  height: 80%;
   border: 3px solid goldenrod;
-  border-radius: 10%;
+  border-radius: 5%;
   margin: 3%;
-  background-color: moccasin;
-  float: right;
+  background-image: url('parchment.jpg');
   text-align: center;
   padding: 1%;
 }
 
-.clear {
+/*.clear {
   float: none;
-}
+}*/
 
-.button-large {
+/*.button-large {
   font-size: 110%;
 }
 
@@ -123,12 +115,11 @@ height: 150px;
   color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
+}*/
 
-
-.headline {
+/*.headline {
   margin-left: 2%;
-}
+}*/
 
 .home-headline {
   text-align: center;
@@ -170,15 +161,20 @@ height: 150px;
   margin: 0 auto;
 }
 
-
-.is-active {
-  background-color: red;
-  width: 100px;
-  height: 100px;
+.isactive {
+  border: 5px solid goldenrod;
+  opacity: 50%;
+  background-color: lightgrey;
+  padding: 1%;
+  border-radius: 5%;
 }
+
 
 .gameboard header {
   text-align: center;
+  margin: 0 auto;
+  padding: 3%;
+  color: goldenrod;
 }
 
 /*

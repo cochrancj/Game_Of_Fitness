@@ -10,10 +10,22 @@ var GameOfFitnessApp = angular.module("Game-Of-Fitness-App", [] );
       }
     })
 
-    $scope.toggleClass = function($event, className) {
-        className = className || 'is-open';
+// This piece of code is supposed to grab the clicked on card's mana number, grab the logged-in users id number, mush them together, and add them for storage in the user's profile. It does not work. 
+    $scope.addToScore = function(mana, userid, cardid){
+        $http.put('/users/'+userid, [mana, cardid])
+        console.log(card.mana, userid);
+    }
+
+
+// This piece of code toggles the class of all cards when a single card is clicked - and doesn't prevent all cards from then being shuffled.
+    $scope.toggleClassName = function($event, className) {
+        className = className || 'isactive';
         $($event.target).toggleClass(className);
     };
+
+
+
+
 
 
 }])

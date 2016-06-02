@@ -1,20 +1,25 @@
-<div class="home-headline">
-  <h1>Log In</h1>
-</div>
+<div class="container content">
+  <div class="column is-half is-offset-one-quarter">
+    <article id="login-welcome">
+      <h1>Game Of Fitness</h1>
+    </article>
 
-<div id="login">
+    <article id="login">
+      <h2>Log In</h2>
 
-  <%= form_tag '/sessions', method: :post do %>
+      <%= form_tag '/sessions', :class =>"control", method: :post do %>
 
-    <span class="game"><%= label_tag :username %>: </span>
-    <%= text_field_tag :username %>
-    <br>
-    <br>
-    <span class="game"><%= label_tag :password %>: </span>
-    <%= text_field_tag :password %>
-    <br>
-    <br>
-    <%= submit_tag "Log In"%>
+        <span class="game"><%= label_tag :username %>: </span>
+        <%= text_field_tag :username %>
+        <br>
+        <br>
+        <span class="game"><%= label_tag :password %>: </span>
+        <%= text_field_tag :password %>
+        <br>
+        <br>
+        <%= submit_tag "Log In", :class =>"button" %>
 
-  <% end %>
+      <% end %>
+    </article>
+  </div>
 </div>

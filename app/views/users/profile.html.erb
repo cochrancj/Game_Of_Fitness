@@ -3,7 +3,7 @@
   <div class="tile is-vertical is-8">
     <div class="tile">
       <div class="tile is-parent is-vertical">
-        <article id="welcome" class="tile is-child content">
+        <article id="login-welcome" class="tile is-child content">
           <h1>Welcome Back <%= @user.username %> </h1>
           <%= button_to "Log Out", deletion_station_path, method: :delete, :class =>"button"  %>
         </article>
@@ -13,11 +13,11 @@
       </div>
       <div id="stats" class="tile is-parent">
         <article class="tile is-child">
-          <p><span class="game">Name:</span> <%= @user.username %></p>
-          <p><span class="game">Class:</span> <%= @user.race %></p>
-          <p><span class="game">Guild:</span> <%= @user.guild %></p>
-          <p><span class="game">Mana:</span> <%= @user.mana %></p>
-          <p><span class="game">Boss Battle Unlocks in:</span> <%= @user.mana %> 900 <span class="game"> Mana.</span></p>
+          <p class="content is-medium"><span class="game">Name:</span> <%= @user.username %></p>
+          <p class="content is-medium"><span class="game">Class:</span> <%= @user.race %></p>
+          <p class="content is-medium"><span class="game">Guild:</span> <%= @user.guild %></p>
+          <p class="content is-medium"><span class="game">Mana:</span> <%= @user.mana %></p>
+          <p class="content is-medium"><span class="game">Boss Battle In:</span> <%= @user.mana %> 900 <span class="game"> Mana</span></p>
         </article>
       </div>
     </div>
@@ -25,15 +25,15 @@
       <article class="tile is-child">
         <!-- Any content you want here -->
         <h4>Game Rules</h4>
-        <p>Click on the WOD button above to begin today's workout. Each WOD is 4 rounds of 13 cards (52 total - the size of a standard playing card deck). You'll get 13 cards per round and can rest between rounds. </p>
-        <p>Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
-        <p>The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accure; the better you'll do.  </p>
-        <p>Ready? Let's kick some ass today.</p>
+        <p class="content is-medium">Click on the WOD button below to begin today's workout. Each WOD consists of 52 cards - the size of a standard playing card deck. Click Shuffle to randomize your workout.</p>
+        <p class="content is-medium">Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
+        <p class="content is-medium">The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accrue; and the better you'll do.  </p>
+        <p class="content is-medium">Ready? Let's kick some ass today.</p>
 
         <div class="control is-grouped">
 
-          <p class="control">
-            <a href="/game/index.html" ng-controller="WorkoutsController" ng-click="shuffle(cards)" class="button">
+          <p class="control" ng-controller="WorkoutsController">
+            <a href="/game/index.html" ng-click="shuffle()" class="button">
             WOD
             </a>
           </p>
@@ -49,17 +49,46 @@
   </div>
   <div id="bag-of-holding" class="tile is-parent">
     <article class="tile is-child">
-      <!-- Any content you want here -->
+
       <h4>INVENTORY</h4>
-      <%= @user.loot %>
-        3 BOXES WIDE <br>
-        3 BOXES WIDE <br>
-        3 BOXES WIDE <br>
-        3 BOXES WIDE <br>
-        3 BOXES WIDE <br>
-        3 BOXES WIDE <br>
-        3 BOXES WIDE <br>
-        3 BOXES WIDE <br>
+      <div class="columns">
+        <div class="column is-centered">
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+        </div>
+        <div class="column is-centered">
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+        </div>
+        <div class="column is-centered">
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+          <div class="loot-box"><%= @user.loot %></div>
+        </div>
+      </div>
+
+
+
 
     </article>
   </div>

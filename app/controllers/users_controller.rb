@@ -14,9 +14,16 @@ class UsersController < ApplicationController
   def log_in
   end
 
+  def current_user
+    # @user = User.find session[:user_id]
+
+    render json: session[:user_id]
+  end
+
 
   def update
-    @user = User.find[:user_id]
+    @user = User.find params[:user_id]
+    # try :id too 
     @card = Card.find[:card_id]
     @user.mana = @user.mana + @card.mana
     @user.save

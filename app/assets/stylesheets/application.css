@@ -128,6 +128,22 @@ li {
   margin: 10% auto;
 }
 
+.one {
+  background-image: url('1.png');
+}
+
+.two {
+  background-image: url('7.png');
+}
+
+.three {
+  background-image: url('11.png');
+}
+
+.four {
+  background-image: url('27.png');
+}
+
 .loot {
   width: 64px;
   height: 64px;

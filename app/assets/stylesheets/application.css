@@ -45,7 +45,7 @@ h4  {
 
 p {
   font-family: 'PT Sans', sans-serif;
-
+  font-size: 16px;
 }
 
 li {
@@ -53,8 +53,12 @@ li {
 }
 
 #welcome {
-  padding: 5%;
+  text-align: center;
+  padding: 3%;
+  color: goldenrod;
+  margin-top: 5%;
 }
+
 #avatar {
   width: 150px;
   height: 150px;
@@ -81,13 +85,10 @@ li {
 }
 
 #rules-front {
-  width: 40%;
-  height: 40%;
   border: 3px solid goldenrod;
   border-radius: 5%;
-  margin: 3%;
-  padding: 2%;
-  margin: 0 auto;
+  margin-bottom: 20%;
+  padding: 5% 10% 5% 10%;
   background-image: url('parchment.jpg');
 }
 

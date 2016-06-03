@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 20160531224903) do
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "race"
     t.string   "guild"
-    t.integer  "mana"
+    t.integer  "mana",            default: 0
     t.string   "loot"
   end
 

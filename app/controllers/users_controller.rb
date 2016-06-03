@@ -15,18 +15,17 @@ class UsersController < ApplicationController
   end
 
   def current_user
-    # @user = User.find session[:user_id]
-    render json: session[:user_id]
+     render json: session[:user_id]
   end
 
 
   def update
-    @user = User.find params[:user_id]
-    # try :id too
-    @card = Card.find[:card_id]
-    @user.mana = @user.mana + @card.mana
-    @user.save
+    @user = User.find session[:user_id]
+    # @user = User.where(session[:user_id])
 
+    @card = Card.where(:id => params[:cardid])
+    # binding.pry
+    # @user.save
   end
   # find current user; find current score; take that number and add to the mana passed in and store that information in the user.
 

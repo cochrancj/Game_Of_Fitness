@@ -17,13 +17,24 @@ var GameOfFitnessApp = angular.module("Game-Of-Fitness-App", [] );
 
 // This piece of code is supposed to grab the clicked on card's mana number, grab the logged-in users id number, mush them together, and add them for storage in the user's profile. It does not work.
     $scope.addToScore = function(mana, cardid){
-        $http.post('/users/current_user').then(function(response){
+        $http.get('/users/current_user').then(function(response){
             var id = response.data;
-
-            $http.put('/users/'+id, [mana, cardid])
-            console.log(mana, cardid);
-            // couldnt find user WITHOUT ID. Pre this put request; an object with just the ID was returned.
-            // research http standard syntax - want to send in an object type: data, json shit send in the body of the request; not the url of hte requezt. 
+            var config ={
+                mana: mana,
+                cardid: cardid
+            }
+            $http.put('/users/'+id, config).then(function(response){
+                 console.log(mana, cardid);
+                })
+                
+// Started PUT "/users/4" for ::1 at 2016-06-03 14:21:31 -0400
+// Processing by UsersController#update as HTML
+//   Parameters: {"mana"=>2, "cardid"=>1, "id"=>"4", "user"=>{"mana"=>2}}
+//   User Load (0.4ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+// Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+//
+// ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+//   app/controllers/users_controller.rb:23:in `update'
         })
 
 

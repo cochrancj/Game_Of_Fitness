@@ -5,6 +5,7 @@
     <header class="content">
       <div>
         <h1 class="is-medium">Workout Of The Day</h1>
+        <h1><%= @user %></h1>
       </div>
     </header>
 
@@ -19,7 +20,7 @@
             <li>
               <span id="card" ng-repeat="card in cards" ng-click="toggleClassName($event, 'isactive')">
 
-              <img ng-src='/assets/{{card.img}}'/>
+              <img ng-src='/assets/{{card.img}}' ng-click="addToScore(card.mana, card.id)"/>
 
 <!-- BUTTON IS COMMENTED OUT FOR STYLING - NEED TO COMBO INTO CARD ITSELF -->
               <!-- <button ng-click="addToScore(card.mana, card.id)">Add to Mana</button> -->
@@ -28,7 +29,8 @@
             </li>
           </ul>
 
-          <div class="columns is-gapless is-centered">
+<!-- LOOT CONTAINER -->
+          <!-- <div class="columns is-gapless is-centered">
               <div class="loot is-one is-centered"></div>
               <div class="loot is-one is-centered"></div>
               <div class="loot is-one is-centered"></div>
@@ -38,7 +40,7 @@
 
             <div id="loot-gen">
               <button class="button is-disabled" ng-click="generateLoot()">Gimme Loot!</button>
-            </div>
+            </div> -->
 
         </div>
       </div>

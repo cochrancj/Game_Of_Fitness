@@ -4,15 +4,17 @@
 
 @import "bulma";
 
-html, body {
- position: absolute;
- top: 0 !important;
- bottom: 0 !important;
- left: 0 !important;
- right: 0 !important;
- min-height: 100% !important;
- background-image: url('cache.jpeg') !important;
-}
+// html, body {
+//  position: absolute;
+//  top: 0 !important;
+//  bottom: 0 !important;
+//  left: 0 !important;
+//  right: 0 !important;
+//  min-height: 100% !important;
+//  background-image: url('cache.jpeg') !important;
+// }
+
+
 
 @font-face {
  font-family: 'gOT';
@@ -24,6 +26,12 @@ html, body {
  font-family: 'game';
  src: url('Pixel_Azure_Bonds.otf');
  src: url('Pixel_Azure_Bonds') format('opentype');
+}
+
+body{
+ background-image: img-url('cache.jpeg');
+ position: absolute;
+ top, bottom, left, right: 0;
 }
 
 h1 {

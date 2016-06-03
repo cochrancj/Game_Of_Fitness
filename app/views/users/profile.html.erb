@@ -3,7 +3,7 @@
   <div class="tile is-vertical is-8">
     <div class="tile">
       <div class="tile is-parent is-vertical">
-        <article id="login-welcome" class="tile is-child content">
+        <article id="profile-welcome" class="tile is-child content">
           <h1>Welcome Back <%= @user.username %> </h1>
           <%= button_to "Log Out", deletion_station_path, method: :delete, :class =>"button"  %>
         </article>
@@ -13,6 +13,7 @@
       </div>
       <div id="stats" class="tile is-parent">
         <article class="tile is-child">
+          <h2>Stats</h2>
           <p class="content is-medium"><span class="game">Name:</span> <%= @user.username %></p>
           <p class="content is-medium"><span class="game">Class:</span> <%= @user.race %></p>
           <p class="content is-medium"><span class="game">Guild:</span> <%= @user.guild %></p>
@@ -24,7 +25,7 @@
     <div id="rules" class="tile is-parent">
       <article class="tile is-child">
         <!-- Any content you want here -->
-        <h4>Game Rules</h4>
+        <h2>Game Rules</h2>
         <p class="content is-medium">Click on the WOD button below to begin today's workout. Each WOD consists of 52 cards - the size of a standard playing card deck. Click Shuffle to randomize your workout.</p>
         <p class="content is-medium">Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
         <p class="content is-medium">The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accrue; and the better you'll do.  </p>
@@ -50,7 +51,7 @@
   <div id="bag-of-holding" class="tile is-parent">
     <article class="tile is-child">
 
-      <h4>INVENTORY</h4>
+      <h2>INVENTORY</h2>
       <div class="columns">
         <div class="column is-centered">
           <div class="loot-box one"></div>

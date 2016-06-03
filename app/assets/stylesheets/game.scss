@@ -77,6 +77,14 @@ li {
  padding: 3%;
  color: goldenrod;
  margin-top: 5%;
+ font-size: 1.5em;
+}
+
+#profile-welcome {
+ text-align: center;
+ padding: 3%;
+ color: goldenrod;
+ margin-top: 5%;
  font-size: 1em;
 }
 
@@ -94,7 +102,11 @@ li {
  margin: 3%;
  background-image: url('parchment.jpg');
  padding: 5%;
- line-height: 1.5;
+ // line-height: 1.5;
+}
+
+#stats, #bag-of-holding, #rules h2 {
+  font-size: 1.5em;
 }
 
 #rules {

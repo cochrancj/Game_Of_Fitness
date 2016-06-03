@@ -48,7 +48,12 @@ var GameOfFitnessApp = angular.module("Game-Of-Fitness-App", [] );
 
 
 
-
+    // $scope.generateLoot = function(){
+    //     var loot = [];
+    //     if $scope.cards.css(className == 'isactive'){
+    //         return loot
+    //     }
+    // }
 
 
 }])

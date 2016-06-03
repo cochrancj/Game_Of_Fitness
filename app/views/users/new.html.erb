@@ -6,29 +6,30 @@
 <article id="login">
   <h2>Register New User</h2>
 
-<%= form_for @user, :html => {:class => "control"} do |f| %>
+  <%= form_for @user, :html => {:class => "control"} do |f| %>
 
-  <%= f.label :username, :class => "label" %>
-  <%= f.text_field :username, :class => "input"  %>
+    <%= f.label :username, :class => " control game" %>
+    <%= f.text_field :username, :class => "control input"  %>
 
-  <%= f.label :email, :class => "label" %>
-  <%= f.text_field :email, :class => "input" %>
+    <%= f.label :email, :class => "control game" %>
+    <%= f.text_field :email, :class => "control input" %>
 
-  <%= f.label :class, :class => "label" %>
-  <%= f.select(:race, ['Elf', 'Orc', 'Paladin', 'Jedi', 'Barbarian'], {}, { :class => "select is-medium !important" }) %>
+    <%= f.label :class, :class => "control game" %><br>
+    <%= f.select(:race, ['Elf', 'Orc', 'Paladin', 'Jedi', 'Barbarian'], {}, { :class => "select control is-medium !important" }) %>
+    <br>
 
-  <%= f.label :guild, :class => "label" %>
-  <%= f.text_field :guild, :class => "input"  %>
+    <%= f.label :guild, :class => "control game" %>
+    <%= f.text_field :guild, :class => "control input"  %>
 
-  <%= f.label :password, :class => "label" %>
-  <%= f.password_field :password, :class => "input" %>
+    <%= f.label :password, :class => "control game" %>
+    <%= f.password_field :password, :class => "control input" %>
 
-  <%= f.label :password_confirmation, :class => "label" %>
-  <%= f.password_field :password_confirmation, :class => "input" %>
-  <br>
-  <br>
-  <%= f.submit 'Create!', :class => 'control button'%>
-<% end %>
+    <%= f.label :password_confirmation, :class => "control game" %>
+    <%= f.password_field :password_confirmation, :class => "control input" %>
+    <br>
+    <br>
+    <%= f.submit 'Create!', :class => 'control button'%>
+  <% end %>
 
 </article>
 </div>

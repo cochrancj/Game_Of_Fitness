@@ -6,27 +6,28 @@
 <article id="login">
   <h2>Register New User</h2>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => {:class => "control"} do |f| %>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+  <%= f.label :username, :class => "label" %>
+  <%= f.text_field :username, :class => "input"  %>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= f.label :email, :class => "label" %>
+  <%= f.text_field :email, :class => "input" %>
 
-  <%= f.label :class %>
-  <%= f.text_field :class %>
+  <%= f.label :class, :class => "label" %>
+  <%= f.select(:race, ['Elf', 'Orc', 'Paladin', 'Jedi', 'Barbarian'], {}, { :class => "select is-medium !important" }) %>
 
-  <%= f.label :guild %>
-  <%= f.text_field :guild %>
+  <%= f.label :guild, :class => "label" %>
+  <%= f.text_field :guild, :class => "input"  %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.label :password, :class => "label" %>
+  <%= f.password_field :password, :class => "input" %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit %>
+  <%= f.label :password_confirmation, :class => "label" %>
+  <%= f.password_field :password_confirmation, :class => "input" %>
+  <br>
+  <br>
+  <%= f.submit 'Create!', :class => 'control button'%>
 <% end %>
 
 </article>

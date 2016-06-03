@@ -24,7 +24,8 @@ class UsersController < ApplicationController
     # @user = User.where(session[:user_id])
 
     @card = Card.where(:id => params[:cardid])
-    # binding.pry
+  # binding.pry
+    # @user.mana ++ @card.mana 
     # @user.save
   end
   # find current user; find current score; take that number and add to the mana passed in and store that information in the user.

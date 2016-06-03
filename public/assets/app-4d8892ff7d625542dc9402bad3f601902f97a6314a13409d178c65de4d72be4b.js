@@ -25,9 +25,8 @@ var GameOfFitnessApp = angular.module("Game-Of-Fitness-App", [] );
             }
             $http.put('/users/'+id, config).then(function(response){
                  console.log(mana, cardid);
-
                 })
-
+                
 // Started PUT "/users/4" for ::1 at 2016-06-03 14:21:31 -0400
 // Processing by UsersController#update as HTML
 //   Parameters: {"mana"=>2, "cardid"=>1, "id"=>"4", "user"=>{"mana"=>2}}
@@ -41,6 +40,8 @@ var GameOfFitnessApp = angular.module("Game-Of-Fitness-App", [] );
 
     }
 
+
+// This piece of code toggles the class of all cards when a single card is clicked - and doesn't prevent all cards from then being shuffled.
     $scope.toggleClassName = function($event, className) {
         className = className || 'isactive';
         $($event.target).toggleClass(className);

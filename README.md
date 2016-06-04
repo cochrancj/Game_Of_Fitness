@@ -9,7 +9,7 @@ Game of Fitness is a card-based workout app created using Ruby on Rails and Angu
 
 ###### https://floating-everglades-39357.herokuapp.com/
 ###### username: Cypher
-###### password: 123
+###### password: cypher
 
 
 #### Screen Shots

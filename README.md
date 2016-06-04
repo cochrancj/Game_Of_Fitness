@@ -5,6 +5,12 @@ Game of Fitness README
 
 Game of Fitness is a card-based workout app created using Ruby on Rails and AngularJS.
 
+#### Log In Information
+
+###### https://floating-everglades-39357.herokuapp.com/
+###### username: Cypher
+###### password: 123
+
 
 #### Screen Shots
 

@@ -1,38 +1,39 @@
-
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
       <div class="tile is-parent is-vertical">
+<!-- Welcome User -->
         <article id="profile-welcome" class="tile is-child content">
           <h1>Welcome Back <%= @user.username %> </h1>
-          <%= button_to "Log Out", deletion_station_path, method: :delete, :class =>"button"  %>
+          <%= button_to "Log Out", deletion_station_path, method: :delete, :class =>"button" %>
         </article>
+<!-- Avatar image - currently hard-coded -->
         <article id="avatar-box" class="tile is-child">
             <%= image_tag("elf-avatar-female.jpg", :id => "avatar") %>
         </article>
       </div>
       <div id="stats" class="tile is-parent">
+<!-- Stats Box -->
         <article class="tile is-child">
           <h2>Stats</h2>
           <p class="content is-medium"><span class="game">Name:</span> <%= @user.username %></p>
           <p class="content is-medium"><span class="game">Class:</span> <%= @user.race %></p>
           <p class="content is-medium"><span class="game">Guild:</span> <%= @user.guild %></p>
           <p class="content is-medium"><span class="game">Mana:</span> <%= @user.mana %></p>
-          <p class="content is-medium"><span class="game">Boss Battle In:</span> <%= @user.mana %> 900 <span class="game"> Mana</span></p>
+          <p class="content is-medium"><span class="game">Boss Battle In:</span> <%= (900 - @user.mana) %> <span class="game"> Mana</span></p>
         </article>
       </div>
     </div>
     <div id="rules" class="tile is-parent">
+<!-- Game Rules Box -->
       <article class="tile is-child">
-        <!-- Any content you want here -->
         <h2>Game Rules</h2>
         <p class="content is-medium">Click on the WOD button below to begin today's workout. Each WOD consists of 52 cards - the size of a standard playing card deck. Click Shuffle to randomize your workout.</p>
         <p class="content is-medium">Each card you complete earns you mana points (for example: a card requiring 2 reps earns you 2 mana; one requiring 25 reps earns you 25 mana) and each completed round earns you inventory.</p>
         <p class="content is-medium">The more mana you get; the quicker you'll earn a boss battle level - the more inventory you accrue; and the better you'll do.  </p>
         <p class="content is-medium">Ready? Let's kick some ass today.</p>
-
         <div class="control is-grouped">
-
+<!-- Workout Button Link to WOD page + disabled link to Boss Battle level -- Boss Battle to come in subsequent versions ... I'm planning on linking to a Phaser game here. -->
           <p class="control" ng-controller="WorkoutsController">
             <a href="/game/index.html" ng-click="shuffle()" class="button">
             WOD
@@ -44,13 +45,12 @@
             </a>
           </p>
         </div>
-
       </article>
     </div>
   </div>
   <div id="bag-of-holding" class="tile is-parent">
     <article class="tile is-child">
-
+<!-- Bag of Holding. Currently, the loot is hard-coded and non-draggable. Subsequent revisions will see this bag duplicated on the WOD page and generated loot will be draggable. -->
       <h2>INVENTORY</h2>
       <div class="columns">
         <div class="column is-centered">
@@ -87,10 +87,6 @@
           <div class="loot-box"><%= @user.loot %></div>
         </div>
       </div>
-
-
-
-
     </article>
   </div>
 </div>

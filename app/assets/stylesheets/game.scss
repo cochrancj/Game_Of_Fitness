@@ -1,23 +1,20 @@
-// Place all the styles related to the Game controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Local Stylesheet
 
+// import Framework
 @import "bulma";
-
-
+// Sets my fancy Headline font
 @font-face {
  font-family: 'gOT';
  src: url('Game_of_Thrones.ttf');
  src: url('Game_of_Thrones') format('truetype');
 }
-
+// Sets my fancy Zelda font
 @font-face {
  font-family: 'game';
  src: url('Pixel_Azure_Bonds.otf');
  src: url('Pixel_Azure_Bonds') format('opentype');
 }
-
-
+// This sets the background image for all pages. Note: This was a bitch to ensure compliance both locally and on Heroku. Bulma does not want to play nice with the Asset Pipeline and Heroku is a jerk.
 html, body {
  background-image: url('cache.jpeg');
  height: 100% !important;
@@ -26,44 +23,44 @@ html, body {
  right: 0;
  left: 0;
 }
-
+// Fancy Game of Thrones headline
 h1 {
  font-family: 'gOT', serif;
  letter-spacing: 0.10em;
  color: goldenrod !important;
 }
-
+// Fancy Zelda subheads
 h2  {
  font-family: 'game', sans-serif;
  color: green !important;
  text-align: center;
 }
-
+// All links
 a {
  text-decoration: none !important;
  color: green !important;
 }
-
+// More Zelda
 h4  {
  font-family: 'game', sans-serif;
  color: green !important;
 }
-
+// Zelda spans for forms
 .game {
  font-family: 'game', sans-serif;
  color: green !important;
  font-size: 1em;
 }
-
+// I wanted my own body text
 p {
  font-family: 'PT Sans', sans-serif;
  font-size: 16px;
 }
-
+// Cards
 li {
  list-style-type: none;
 }
-
+// headline for splash page
 #welcome {
  text-align: center;
  padding: 3%;
@@ -71,7 +68,7 @@ li {
  margin-top: 5%;
  font-size: 3em;
 }
-
+// headline for login page. Note: font sizes are wonky because of Bulma.
 #login-welcome {
  text-align: center;
  padding: 3%;
@@ -79,7 +76,7 @@ li {
  margin-top: 5%;
  font-size: 1.5em;
 }
-
+// headline for the profile page. Yet another H1 size conflict.
 #profile-welcome {
  text-align: center;
  padding: 3%;
@@ -87,7 +84,7 @@ li {
  margin-top: 5%;
  font-size: 1em;
 }
-
+// This is the box to hold the avatar image, which is currently hard coded.
 #avatar {
  width: 150px;
  height: 150px;
@@ -95,20 +92,19 @@ li {
  border-radius: 25px;
  margin-left: 20%;
 }
-
+// Stats box
 #stats {
  border: 3px solid goldenrod;
  border-radius: 25px;
  margin: 3%;
  background-image: url('parchment.jpg');
  padding: 5%;
- // line-height: 1.5;
 }
-
+// The h2s for the Profile page
 #stats, #bag-of-holding, #rules h2 {
   font-size: 1.5em;
 }
-
+// Rules box for the Profile page
 #rules {
  border: 3px solid goldenrod;
  border-radius: 25px;
@@ -116,7 +112,7 @@ li {
  padding: 2%;
  background-image: url('parchment.jpg');
 }
-
+// Rules box for the splash page
 #rules-front {
  border: 3px solid goldenrod;
  border-radius: 25px;
@@ -124,11 +120,11 @@ li {
  padding: 5% 10% 5% 10%;
  background-image: url('parchment.jpg');
 }
-
+// H2 for the rules splash page box
 #rules-front h2 {
  font-size: 2em;
 }
-
+// The Bag of Holding (loot storage) area on the Profile page
 #bag-of-holding {
  border: 3px solid goldenrod;
  border-radius: 25px;
@@ -137,7 +133,7 @@ li {
  text-align: center;
  padding: 1%;
 }
-
+// Box where loot will eventually populate when you complete a round/all cards on the WOD page
 .loot-box {
  width: 64px;
  height: 64px;
@@ -148,27 +144,23 @@ li {
  background-color: moccasin;
  background-size: contain;
 }
-
+// Hard coded loot item 1
 .one {
  background-image: url('1.png');
-
 }
-
+// Hard coded loot item 2
 .two {
  background-image: url('7.png');
-
 }
-
+// Hard coded loot item 3
 .three {
  background-image: url('11.png');
-
 }
-
+// Hard coded loot item 4
 .four {
  background-image: url('27.png');
-
 }
-
+// Loot item boxes
 .loot {
  width: 64px;
  height: 64px;
@@ -180,8 +172,7 @@ li {
  background-color: moccasin;
  background-size: contain;
 }
-
-
+// Log in page box
 #login {
  width: 70%;
  height: 90%;
@@ -193,18 +184,18 @@ li {
  text-align: center;
  margin: 0 auto;
 }
-
+// The h2 for the login page
 #login h2 {
  font-size: 2em;
 }
-
+// Headline for the WOD page
 #gameboard header {
  text-align: center;
  margin: 0 auto;
  padding-top: 5%;
  color: goldenrod;
 }
-
+// The game board itself
 #board {
  background-image: url('parchment.jpg');
  padding-top: 3%;
@@ -214,17 +205,17 @@ li {
  border-radius: 25px;
  margin-bottom: 20%;
 }
-
+// The shuffle button
 #shuffle {
  margin: 0 auto;
 }
-
+// The Cards
 #card img {
  width: 200px;
  height: 270px;
  margin: 2%;
 }
-
+// Card layout styling
 #card li {
  display: inline;
  float: left;
@@ -232,16 +223,16 @@ li {
  margin: 5%;
  padding: 5%;
 }
-
+// Tied to eventual loot boxes
 #done {
  text-align: center;
  margin: 0 auto;
 }
-
+// Eventual loot boxes
 #loot-gen {
  display:inline;
 }
-
+// Card has been completed 
 .isactive {
  border: 5px solid goldenrod;
  opacity: 50%;

@@ -1,14 +1,14 @@
 <div class="container content">
   <div class="column is-half is-offset-one-quarter">
+<!-- Log in page header -->
     <article id="login-welcome">
       <h1>Game Of Fitness</h1>
     </article>
-
+<!-- Log in page form  -->
     <article id="login">
       <h2>Log In</h2>
 
       <%= form_tag '/sessions', :class =>"control", method: :post do %>
-
         <span class="game"><%= label_tag :username %>: </span>
         <%= text_field_tag :username %>
         <br>
@@ -18,8 +18,8 @@
         <br>
         <br>
         <%= submit_tag "Log In", :class =>"button" %>
-
       <% end %>
+      
     </article>
   </div>
 </div>

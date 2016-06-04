@@ -1,35 +1,35 @@
 <div class="column is-half is-offset-one-quarter">
+<!-- New user welcome headline -->
   <article id="welcome">
     <h1>Game Of Fitness</h1>
   </article>
+<!-- New user log in form -->
+  <article id="login">
+    <h2>Register New User</h2>
 
-<article id="login">
-  <h2>Register New User</h2>
+    <%= form_for @user, :html => {:class => "control"} do |f| %>
+      <%= f.label :username, :class => " control game" %>
+      <%= f.text_field :username, :class => "control input"  %>
 
-  <%= form_for @user, :html => {:class => "control"} do |f| %>
+      <%= f.label :email, :class => "control game" %>
+      <%= f.text_field :email, :class => "control input" %>
 
-    <%= f.label :username, :class => " control game" %>
-    <%= f.text_field :username, :class => "control input"  %>
+      <%= f.label :class, :class => "control game" %>
+      <br>
+      <%= f.select(:race, ['Elf', 'Orc', 'Paladin', 'Jedi', 'Barbarian'], {}, { :class => "select control is-medium !important" }) %>
+      <br>
+      <%= f.label :guild, :class => "control game" %>
+      <%= f.text_field :guild, :class => "control input"  %>
 
-    <%= f.label :email, :class => "control game" %>
-    <%= f.text_field :email, :class => "control input" %>
+      <%= f.label :password, :class => "control game" %>
+      <%= f.password_field :password, :class => "control input" %>
 
-    <%= f.label :class, :class => "control game" %><br>
-    <%= f.select(:race, ['Elf', 'Orc', 'Paladin', 'Jedi', 'Barbarian'], {}, { :class => "select control is-medium !important" }) %>
-    <br>
+      <%= f.label :password_confirmation, :class => "control game" %>
+      <%= f.password_field :password_confirmation, :class => "control input" %>
+      <br>
+      <br>
+      <%= f.submit 'Create!', :class => 'control button'%>
+    <% end %>
 
-    <%= f.label :guild, :class => "control game" %>
-    <%= f.text_field :guild, :class => "control input"  %>
-
-    <%= f.label :password, :class => "control game" %>
-    <%= f.password_field :password, :class => "control input" %>
-
-    <%= f.label :password_confirmation, :class => "control game" %>
-    <%= f.password_field :password_confirmation, :class => "control input" %>
-    <br>
-    <br>
-    <%= f.submit 'Create!', :class => 'control button'%>
-  <% end %>
-
-</article>
+  </article>
 </div>
